@@ -1,0 +1,34 @@
+.about {
+  height: 500px;
+
+  @include onDesktop {
+    height: 650px;
+  }
+
+  background: url("./img/banners/about.png") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__text-container {
+    max-width: 380px;
+    color: #fff;
+    text-align: center;
+  }
+
+  &__title {
+    padding-top: 40px;
+
+    @include onTablet {
+      padding-top: 89px;
+    }
+
+    @include onDesktop {
+      padding-top: 164px;
+    }
+  }
+
+  &__description {
+    margin-bottom: 32px;
+  }
+}

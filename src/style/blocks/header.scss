@@ -1,0 +1,19 @@
+.header {
+  &__top-line {
+    height: 60px;
+    background-color: #161616;
+  }
+
+  &__nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+  }
+
+  &__logo {
+    width: 104px;
+    height: 26px;
+    background: url("./img/icons/Logo.svg") center no-repeat;
+  }
+}

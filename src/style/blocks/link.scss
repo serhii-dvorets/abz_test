@@ -1,0 +1,20 @@
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 34px;
+  border-radius: 80px;
+  background: #f4e041;
+  color: rgba(0, 0, 0, 0.87);
+
+  &:hover {
+    background: #ffe302;
+  }
+
+  &-container {
+    width: 210px;
+    display: flex;
+    justify-content: space-between;
+  }
+}

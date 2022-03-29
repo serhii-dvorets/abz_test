@@ -1,0 +1,117 @@
+.registration {
+  position: relative;
+
+  &__form {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 380px;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  &__input {
+    padding: 0 16px;
+    display: flex;
+    height: 54px;
+    margin-bottom: 50px;
+    border-radius: 4px;
+    border: 1px solid #d0cfcf;
+    background-color: #f8f8f8;
+
+    &:last-child {
+      margin-bottom: 43px;
+    }
+
+    &::placeholder {
+      color: #7e7e7e;
+    }
+  }
+
+  &__radio-container {
+    max-width: 380px;
+    margin-bottom: 47px;
+  }
+
+  &__radio-title {
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 11px;
+  }
+
+  &__radio-input {
+    display: none;
+  }
+
+  &__radio-label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+
+    &::before {
+      margin-right: 12px;
+      display: inline-block;
+      content: "";
+      width: 20px;
+      height: 20px;
+      background: url("./img/icons/list.svg") left no-repeat;
+    }
+
+    &--active {
+      &::before {
+        display: inline-block;
+        content: "";
+        width: 20px;
+        height: 20px;
+        background: url("./img/icons/list-active.svg") left no-repeat;
+      }
+    }
+  }
+
+  &__photo--input {
+    position: absolute;
+    opacity: 0;
+  }
+
+  &__photo--button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -16px;
+    width: 83px;
+    border: 1px solid rgba(0, 0, 0, 0.87);
+    box-sizing: border-box;
+    border-radius: 4px 0px 0px 4px;
+    color: rgba(0, 0, 0, 0.87);
+  }
+
+  &__photo--uploaded-photo {
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    color: #7e7e7e;
+  }
+
+  &__input--photo {
+    margin-bottom: 50px;
+  }
+
+  &__button {
+    background: #b4b4b4;
+    color: rgba(255, 255, 255, 0.87);
+    margin-bottom: 100px;
+  }
+
+  &__image {
+    display: block;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+  }
+}
+
+.registration__input.error {
+  box-shadow: 0 0 15px red;
+}
