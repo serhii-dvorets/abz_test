@@ -73,14 +73,15 @@ h6 {
   background: url("./src/img/icons/Logo.svg") center no-repeat; }
 
 .container {
-  margin: 0 16px;
+  margin: 0 auto;
+  padding: 0 16px;
   max-width: 1170px; }
   @media (min-width: 768px) {
     .container {
-      margin: 0 32px; } }
+      padding: 0 32px; } }
   @media (min-width: 1024px) {
     .container {
-      margin: 0 60px; } }
+      padding: 0 60px; } }
 
 html {
   box-sizing: border-box;
