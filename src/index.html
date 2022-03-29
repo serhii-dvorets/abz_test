@@ -1,13 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
-    <link rel="stylesheet" href="./styles/main.scss">
-  </head>
-  <body>
-    <h1>Hello Mate Academy</h1>
-    <script type="text/javascript" src="scripts/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body class="body">
+  <header class="header">
+    <div class="header__top-line"></div>
+    <nav class="container">
+      <nav class="header__nav-container">
+        <div class="header__logo"></div>
+        <div class="link-container">
+          <a href="#users" class="link">Users</a>
+          <a href="#registration" class="link">Sign up</a>
+        </div>
+      </nav>
+      </div>
+  </header>
+
+  <main>
+
+    <section class="about">
+      <div class="container">
+        <h1 class="about__text-container section__title about__title">Test assignment for front-end developer</h1>
+        <p class="about__text-container about__description">
+          What defines a good front-end developer is one that has skilled knowledge of HTML,
+          CSS, JS with a vast understanding of
+          User design thinking as they'll be building web interfaces with accessibility in mind. They should also be
+          excited to
+          learn, as the world of Front-End Development keeps evolving.
+        </p>
+      </div>
+      <a href="#" class="link link--nav">Sign up</a>
+    </section>
+
+    <section class="users" id="users">
+      <div class="container">
+        <h2 class="section__title users__title">Working with GET request</h2>
+        <div class="users__container"></div>
+        <button class="button users__button">Show more</button>
+      </div>
+    </section>
+
+    <section class="registration" id="registration">
+      <div class="container">
+        <h2 class="section__title registration__title">Working with POST request</h2>
+        <form
+          class="registration__form"
+        >
+          <input type="text" placeholder="Your name" class="registration__input name">
+          <input type="email" placeholder="Email" class="registration__input email">
+          <input type="tel" placeholder="Phone" class="registration__input phone">
+
+          <div class="registration__radio-container">
+            <h3 class="registration__radio-title">Select your position</h3>
+          </div>
+          <label for="photo" class="registration__input registration__input--photo">
+            <input type="file" accept=".jpg, .png, .gif" name="photo" id="photo" accept="image/*"
+              class="registration__photo--input" width="70" height="70">
+            <div class="registration__photo--button">Upload</div>
+            <div class="registration__photo--uploaded-photo">Upload your photo</div>
+          </label>
+          <button type="submit" class="button registration__button">Sign up</button>
+        </form>
+      </div>
+    </section>
+
+    <div class="success success--hidden">
+      <div class="success__title section__title">User successfully registered</div>
+    </div>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+
 </html>
