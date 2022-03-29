@@ -125,6 +125,9 @@ function fetchData() {
   formData.append('phone', phoneInput.value);
   formData.append('photo', photo);
 
+  successMessage.classList.remove('success--hidden');
+  window, scrollTo(0, document.body.scrollHeight);
+
   fetch('https://frontend-test-assignment-api.abz.agency/api/v1/users', {
     method: 'POST',
     body: formData,
@@ -150,8 +153,9 @@ function fetchData() {
 
         successMessage.classList.remove('success--hidden');
         setTimeout(() => {
+          window.scrollTo(0, document.body.scrollHeight);
           successMessage.classList.add('success--hidden');
-        }, 5000)
+        }, 3000)
 
       } else {
         alert(data.message)
@@ -242,37 +246,6 @@ form.addEventListener('submit', (e) => {
 form.addEventListener('input', (e) => {
   formRemoveError(e.target);
 })
-
-function formValidate(form) {
-  let error = 0;
-  let formRequired = document.querySelectorAll('.required');
-
-  for (let i = 0; i < formRequired.length; i++) {
-    const input = formRequired[i];
-
-    formRemoveError(input);
-
-    if (input.classList.contains('email')) {
-      if (emailTest(input)) {
-        formAddError(input);
-        error++;
-      }
-    } else if (input.value === '') {
-      formAddError(input);
-      error++;
-    }
-
-    if (input.classList.contains('phone')) {
-      if (phoneTest(input)) {
-        formAddError(input);
-        error++;
-      }
-    } else if (input.value === '') {
-      formAddError(input);
-      error++;
-    }
-  }
-}
 
 function validateName(input) {
 
